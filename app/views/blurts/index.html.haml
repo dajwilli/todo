@@ -1,5 +1,6 @@
 .ui.container
-  = react_component 'Blurts', {data: @blurts}
+  .timeline
+    = react_component 'Blurts', {data: @blurts}
 
   %form.ui.reply.form
     .field
