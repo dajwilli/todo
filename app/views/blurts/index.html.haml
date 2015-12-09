@@ -1,10 +1,14 @@
 .ui.container
+  .ui.inline.nag
+    %span.title
+      Messasge can't be empty
+    %i.close.icon
   .timeline
     = react_component 'Blurts', {data: @blurts}
 
-  %form.ui.reply.form
-    .field
-      %textarea
-    .ui.blue.labeled.submit.icon.button
-      %i.icon.edit 
-      Post Blurt
+  / %form.ui.reply.form
+  /   .field
+  /     %textarea
+  /   .ui.blue.labeled.submit.icon.button.disabled#post
+  /     %i.icon.edit 
+  /     Post Blurt

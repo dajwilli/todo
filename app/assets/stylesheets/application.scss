@@ -24,6 +24,19 @@
   box-shadow: #ABA2A2 0px 2px 0px 0px;
 }
 
+// .ui.container {
+//   border-left: 2px solid;
+//   border-right: 2px solid;
+// }
+
+.ui.inline.nag {
+  box-shadow: 0 4px 0 0 #414548;
+}
+
+.selected {
+  color: red;
+}
+
 .ui.container {
   // background-color: yellow;
 }
@@ -35,4 +48,11 @@
 .timeline {
   margin-bottom: 20px;
   margin-top: 50px;
+  .event:hover {
+    padding: 6px;
+  }
+}
+
+#post {
+  box-shadow: 0 4px 0 0 #256398;
 }

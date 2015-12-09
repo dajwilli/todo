@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208210827) do
+ActiveRecord::Schema.define(version: 20151209213421) do
+
+  create_table "blurt_likes", force: :cascade do |t|
+    t.integer "blurt_id"
+  end
+
+  add_index "blurt_likes", ["blurt_id"], name: "index_blurt_likes_on_blurt_id"
 
   create_table "blurts", force: :cascade do |t|
     t.datetime "created_at", null: false
