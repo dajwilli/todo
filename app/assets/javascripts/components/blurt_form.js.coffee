@@ -8,6 +8,8 @@
 
   submit: (e) ->
     e.preventDefault();
+    console.log 'Add Blurt'
+    console.log @props
     if @state.message
       $.post '', { blurt: @state }, (data) =>
         @props.handleNewBlurt data
