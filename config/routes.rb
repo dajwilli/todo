@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :blurts do
     member do
       get :likes
+      post :like_blurt
     end
   end
   resources :tasks

@@ -16,41 +16,16 @@
 
 @import "semantic-ui";
 
-.tasks {
-  padding: 5px 10px;
-}
-
-#follow {
-  box-shadow: #ABA2A2 0px 2px 0px 0px;
-}
-
-// .ui.container {
-//   border-left: 2px solid;
-//   border-right: 2px solid;
-// }
-
-// .summary {
-//   display: inline-block;
-// }
-
 .delete.blurt {
-  // margin-left: 80%;
+  display: none;
 }
-
-// .meta {
-//   display: block;
-// }
 
 .ui.inline.nag {
   box-shadow: 0 4px 0 0 #414548;
 }
 
-.selected {
+.like.icon.selected {
   color: red;
-}
-
-.ui.container {
-  // background-color: yellow;
 }
 
 .ui.large.feed {
@@ -62,9 +37,13 @@
   margin-top: 50px;
   .event:hover {
     padding: 6px;
+    .delete.blurt {
+      display: inline-block;
+      cursor: pointer;
+    }
   }
 }
 
-#post {
+.button#post {
   box-shadow: 0 4px 0 0 #256398;
 }

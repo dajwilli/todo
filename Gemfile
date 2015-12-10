@@ -26,6 +26,7 @@ gem 'react-rails', '~> 1.0'
 gem 'sprockets-coffee-react'
 gem "haml-rails"
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -25,7 +25,13 @@ class BlurtsController < ApplicationController
   end
 
   def like_blurt
-    BlurtLike.create(blurt_id: params[:id])
+    @blurt_like = BlurtLike.new(blurt_id: params[:id])
+    if @blurt_like.save
+      render json: @blurt_like
+    else
+      render json: @blurt_like.errors, status: :unprocessable_entity
+    end
+    puts @blurt_like.errors
   end
 
   private
