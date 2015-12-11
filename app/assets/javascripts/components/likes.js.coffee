@@ -19,7 +19,7 @@
       url: "/blurts/#{@props.id}/like_blurt"
       data_type: 'JSON'
       succeess: () =>
-        @props.addLike @props
+        @props.addLike
 
   render: ->
     if @state.likes > 0

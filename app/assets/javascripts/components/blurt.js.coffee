@@ -1,12 +1,9 @@
 @Blurt = React.createClass
-  addLike: (data) ->
-    @forceUpdate(data)
+  addLike: ->
+    @forceUpdate <Like {...@props} source={"/blurts/#{@props.id}/likes"} handleLike={@addLike}/>
 
   handleDelete: (e) ->
     e.preventDefault()
-    console.log 'Clicked Blurt'
-    console.log e.target
-    console.log @props
     $.ajax
       method: 'DELETE'
       url: "/blurts/#{ @props.id }"

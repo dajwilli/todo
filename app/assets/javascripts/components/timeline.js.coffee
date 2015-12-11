@@ -1,15 +1,13 @@
 @Timeline = React.createClass
-  deleteBlurt: (blurt) ->
-    index = @state.blurts.indexOf blurt
-    blurts = React.addons.update(@state.blurts, { $splice: [[index, 1]] })
-    @replaceState blurts: blurts
+  getInitialState: ->
+    blurts: @props.blurts
 
   test: ->
     1
 
   render: ->
-    list = @props.blurts.map((blurtProps) ->
-      return <Blurt key={blurtProps.id} {...blurtProps} handleDeleteBlurt={@deleteBlurt}/>
+    list = @props.blurts.map((blurtProps) =>
+      return <Blurt key={blurtProps.id} {...blurtProps} handleDeleteBlurt={@props.deleteBlurt}/>
     )
     return <div className="ui large feed">
       {list}
